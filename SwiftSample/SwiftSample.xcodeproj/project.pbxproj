@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90AFC54C2311018800CF24B9 /* SampleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AFC54B2311018800CF24B9 /* SampleListViewController.swift */; };
 		90DBC7ED2301500F00235BDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DBC7EC2301500F00235BDA /* AppDelegate.swift */; };
 		90DBC7EF2301500F00235BDA /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DBC7EE2301500F00235BDA /* RootViewController.swift */; };
 		90DBC7F42301501000235BDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90DBC7F32301501000235BDA /* Assets.xcassets */; };
 		90DBC7F72301501000235BDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90DBC7F52301501000235BDA /* LaunchScreen.storyboard */; };
 		90DBC8022301501000235BDA /* SwiftSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DBC8012301501000235BDA /* SwiftSampleTests.swift */; };
 		90DBC80D2301501000235BDA /* SwiftSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DBC80C2301501000235BDA /* SwiftSampleUITests.swift */; };
+		90DBC81B2302F42200235BDA /* CustomCellListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DBC81A2302F42200235BDA /* CustomCellListViewController.swift */; };
+		90DBC81E23057EDD00235BDA /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DBC81D23057EDD00235BDA /* UITableView+Extension.swift */; };
+		90DBC8212305801C00235BDA /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DBC8202305801C00235BDA /* CustomCell.swift */; };
+		90DBC8232305804E00235BDA /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90DBC8222305804E00235BDA /* CustomCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		90AFC54B2311018800CF24B9 /* SampleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleListViewController.swift; sourceTree = "<group>"; };
 		90DBC7E92301500F00235BDA /* SwiftSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90DBC7EC2301500F00235BDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90DBC7EE2301500F00235BDA /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +51,10 @@
 		90DBC8082301501000235BDA /* SwiftSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90DBC80C2301501000235BDA /* SwiftSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSampleUITests.swift; sourceTree = "<group>"; };
 		90DBC80E2301501000235BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90DBC81A2302F42200235BDA /* CustomCellListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellListViewController.swift; sourceTree = "<group>"; };
+		90DBC81D23057EDD00235BDA /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		90DBC8202305801C00235BDA /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		90DBC8222305804E00235BDA /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +82,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90AFC54D231105B200CF24B9 /* CustomCellList */ = {
+			isa = PBXGroup;
+			children = (
+				90DBC81A2302F42200235BDA /* CustomCellListViewController.swift */,
+				90DBC81F23057FE400235BDA /* Cell */,
+			);
+			path = CustomCellList;
+			sourceTree = "<group>";
+		};
 		90DBC7E02301500F00235BDA = {
 			isa = PBXGroup;
 			children = (
@@ -95,8 +114,11 @@
 		90DBC7EB2301500F00235BDA /* SwiftSample */ = {
 			isa = PBXGroup;
 			children = (
+				90DBC81C23057EAB00235BDA /* Extension */,
 				90DBC7EC2301500F00235BDA /* AppDelegate.swift */,
 				90DBC7EE2301500F00235BDA /* RootViewController.swift */,
+				90AFC54B2311018800CF24B9 /* SampleListViewController.swift */,
+				90AFC54D231105B200CF24B9 /* CustomCellList */,
 				90DBC7F32301501000235BDA /* Assets.xcassets */,
 				90DBC7F52301501000235BDA /* LaunchScreen.storyboard */,
 				90DBC7F82301501000235BDA /* Info.plist */,
@@ -120,6 +142,23 @@
 				90DBC80E2301501000235BDA /* Info.plist */,
 			);
 			path = SwiftSampleUITests;
+			sourceTree = "<group>";
+		};
+		90DBC81C23057EAB00235BDA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				90DBC81D23057EDD00235BDA /* UITableView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		90DBC81F23057FE400235BDA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				90DBC8202305801C00235BDA /* CustomCell.swift */,
+				90DBC8222305804E00235BDA /* CustomCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +267,7 @@
 			files = (
 				90DBC7F72301501000235BDA /* LaunchScreen.storyboard in Resources */,
 				90DBC7F42301501000235BDA /* Assets.xcassets in Resources */,
+				90DBC8232305804E00235BDA /* CustomCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,8 +292,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90AFC54C2311018800CF24B9 /* SampleListViewController.swift in Sources */,
+				90DBC8212305801C00235BDA /* CustomCell.swift in Sources */,
 				90DBC7EF2301500F00235BDA /* RootViewController.swift in Sources */,
 				90DBC7ED2301500F00235BDA /* AppDelegate.swift in Sources */,
+				90DBC81B2302F42200235BDA /* CustomCellListViewController.swift in Sources */,
+				90DBC81E23057EDD00235BDA /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
