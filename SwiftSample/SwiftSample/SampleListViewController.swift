@@ -3,9 +3,9 @@ import UIKit
 
 class SampleListViewController: UIViewController {
     enum Section: Int, CaseIterable {
-        case customCellList
+        case customCellList, overlayClippedView
     }
-    private var names = ["CustomCellListViewController"]
+    private var names = ["CustomCellListViewController", "OverlayClippedBaseViewController"]
     private let tableView = UITableView(frame: .zero)
     
     override func viewDidLoad() {
@@ -32,8 +32,12 @@ extension SampleListViewController: UITableViewDelegate {
         case .customCellList:
             let viewController = CustomCellListViewController()
             navigationController?.pushViewController(viewController, animated: true)
-            tableView.deselectRow(at: indexPath, animated: true)
+        case .overlayClippedView:
+            let viewController = OverlayClippedBaseViewController()
+            viewController.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(viewController, animated: true)
         }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
@@ -47,10 +51,10 @@ extension SampleListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let name = names[indexPath.row]
+        let name = names[indexPath.section]
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = name
         cell.accessoryType = .disclosureIndicator
+        cell.textLabel?.text = name        
         return cell
     }
 }
