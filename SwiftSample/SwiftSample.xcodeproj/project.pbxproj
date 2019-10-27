@@ -10,6 +10,10 @@
 		90AFC54C2311018800CF24B9 /* SampleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AFC54B2311018800CF24B9 /* SampleListViewController.swift */; };
 		90CC36DD2325333F00C4C080 /* OverlayClippedBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CC36DC2325333F00C4C080 /* OverlayClippedBaseViewController.swift */; };
 		90CC36DF232540D200C4C080 /* OverlayClippedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CC36DE232540D200C4C080 /* OverlayClippedViewController.swift */; };
+		90D7776E2365978700EF63E0 /* NestedGroupCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D7776D2365978700EF63E0 /* NestedGroupCollectionViewController.swift */; };
+		90D777702365998600EF63E0 /* NestedGroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D7776F2365998600EF63E0 /* NestedGroupCollectionViewCell.swift */; };
+		90D77772236599B300EF63E0 /* NestedGroupCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90D77771236599B300EF63E0 /* NestedGroupCollectionViewCell.xib */; };
+		90D7777423659A9900EF63E0 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D7777323659A9900EF63E0 /* UICollectionView+Extension.swift */; };
 		90DBC7ED2301500F00235BDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DBC7EC2301500F00235BDA /* AppDelegate.swift */; };
 		90DBC7EF2301500F00235BDA /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DBC7EE2301500F00235BDA /* RootViewController.swift */; };
 		90DBC7F42301501000235BDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90DBC7F32301501000235BDA /* Assets.xcassets */; };
@@ -43,6 +47,10 @@
 		90AFC54B2311018800CF24B9 /* SampleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleListViewController.swift; sourceTree = "<group>"; };
 		90CC36DC2325333F00C4C080 /* OverlayClippedBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayClippedBaseViewController.swift; sourceTree = "<group>"; };
 		90CC36DE232540D200C4C080 /* OverlayClippedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayClippedViewController.swift; sourceTree = "<group>"; };
+		90D7776D2365978700EF63E0 /* NestedGroupCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedGroupCollectionViewController.swift; sourceTree = "<group>"; };
+		90D7776F2365998600EF63E0 /* NestedGroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedGroupCollectionViewCell.swift; sourceTree = "<group>"; };
+		90D77771236599B300EF63E0 /* NestedGroupCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NestedGroupCollectionViewCell.xib; sourceTree = "<group>"; };
+		90D7777323659A9900EF63E0 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		90DBC7E92301500F00235BDA /* SwiftSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90DBC7EC2301500F00235BDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90DBC7EE2301500F00235BDA /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +112,16 @@
 			path = OverlayClippedView;
 			sourceTree = "<group>";
 		};
+		90D7776C2365974100EF63E0 /* NestedGroupCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				90D7776D2365978700EF63E0 /* NestedGroupCollectionViewController.swift */,
+				90D7776F2365998600EF63E0 /* NestedGroupCollectionViewCell.swift */,
+				90D77771236599B300EF63E0 /* NestedGroupCollectionViewCell.xib */,
+			);
+			path = NestedGroupCollectionView;
+			sourceTree = "<group>";
+		};
 		90DBC7E02301500F00235BDA = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +151,7 @@
 				90AFC54B2311018800CF24B9 /* SampleListViewController.swift */,
 				90AFC54D231105B200CF24B9 /* CustomCellList */,
 				90CC36DB2325325400C4C080 /* OverlayClippedView */,
+				90D7776C2365974100EF63E0 /* NestedGroupCollectionView */,
 				90DBC7F32301501000235BDA /* Assets.xcassets */,
 				90DBC7F52301501000235BDA /* LaunchScreen.storyboard */,
 				90DBC7F82301501000235BDA /* Info.plist */,
@@ -162,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				90DBC81D23057EDD00235BDA /* UITableView+Extension.swift */,
+				90D7777323659A9900EF63E0 /* UICollectionView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -282,6 +302,7 @@
 				90DBC7F72301501000235BDA /* LaunchScreen.storyboard in Resources */,
 				90DBC7F42301501000235BDA /* Assets.xcassets in Resources */,
 				90DBC8232305804E00235BDA /* CustomCell.xib in Resources */,
+				90D77772236599B300EF63E0 /* NestedGroupCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,13 +328,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				90AFC54C2311018800CF24B9 /* SampleListViewController.swift in Sources */,
+				90D7777423659A9900EF63E0 /* UICollectionView+Extension.swift in Sources */,
 				90DBC8212305801C00235BDA /* CustomCell.swift in Sources */,
 				90DBC7EF2301500F00235BDA /* RootViewController.swift in Sources */,
 				90CC36DF232540D200C4C080 /* OverlayClippedViewController.swift in Sources */,
 				90CC36DD2325333F00C4C080 /* OverlayClippedBaseViewController.swift in Sources */,
 				90DBC7ED2301500F00235BDA /* AppDelegate.swift in Sources */,
+				90D7776E2365978700EF63E0 /* NestedGroupCollectionViewController.swift in Sources */,
 				90DBC81B2302F42200235BDA /* CustomCellListViewController.swift in Sources */,
 				90DBC81E23057EDD00235BDA /* UITableView+Extension.swift in Sources */,
+				90D777702365998600EF63E0 /* NestedGroupCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +506,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SwiftSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -499,6 +524,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SwiftSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

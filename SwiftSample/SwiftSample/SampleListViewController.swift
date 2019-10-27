@@ -3,9 +3,8 @@ import UIKit
 
 class SampleListViewController: UIViewController {
     enum Section: Int, CaseIterable {
-        case customCellList, overlayClippedView
+        case customCellList, overlayClippedView, nestedGroupCollectionView
     }
-    private var names = ["CustomCellListViewController", "OverlayClippedBaseViewController"]
     private let tableView = UITableView(frame: .zero)
     
     override func viewDidLoad() {
@@ -36,6 +35,10 @@ extension SampleListViewController: UITableViewDelegate {
             let viewController = OverlayClippedBaseViewController()
             viewController.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(viewController, animated: true)
+        case .nestedGroupCollectionView:
+            let viewController = NestedGroupCollectionViewController()
+            viewController.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(viewController, animated: true)
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -51,10 +54,20 @@ extension SampleListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let name = names[indexPath.section]
+        guard let section = Section(rawValue: indexPath.section) else {
+            fatalError("Invalid section")
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.accessoryType = .disclosureIndicator
-        cell.textLabel?.text = name        
+        switch section {
+        case .customCellList:
+            cell.textLabel?.text = "CustomCellListViewController"
+        case .overlayClippedView:
+            cell.textLabel?.text = "OverlayClippedBaseViewController"
+        case .nestedGroupCollectionView:
+            cell.textLabel?.text = "NestedGroupCollectionViewController"
+        }
+               
         return cell
     }
 }
