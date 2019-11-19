@@ -25,12 +25,11 @@ class NestedGroupCollectionViewController: UIViewController {
     }
     
     func createLayout() -> UICollectionViewLayout {
-        let outsideLeadingInset: CGFloat = 18
-        let outsideTrailingInset: CGFloat = 18
+        let sideInset: CGFloat = 18
         let insideInset: CGFloat = 8
         let topInset: CGFloat = 8
         let viewWidth: CGFloat = view.bounds.width
-        let smallSquareWidth: CGFloat = (viewWidth - (outsideLeadingInset + outsideTrailingInset + insideInset * 2)) / 3
+        let smallSquareWidth: CGFloat = (viewWidth - (sideInset * 2 + insideInset * 2)) / 3
         let mediumSquareWidth: CGFloat = smallSquareWidth * 2 + insideInset
         let nestedGroupHeight: CGFloat = mediumSquareWidth + topInset
         let smallSquareGroupHeight: CGFloat = smallSquareWidth + topInset
@@ -43,16 +42,16 @@ class NestedGroupCollectionViewController: UIViewController {
                 let smallSquareItem = NSCollectionLayoutItem(
                     layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                                       heightDimension: .absolute(smallSquareWidth + insideInset)))
-                smallSquareItem.contentInsets = NSDirectionalEdgeInsets(top: topInset, leading: outsideLeadingInset, bottom: 0, trailing: insideInset)
+                smallSquareItem.contentInsets = NSDirectionalEdgeInsets(top: topInset, leading: 0, bottom: 0, trailing: insideInset)
                 let smallSquareGroup = NSCollectionLayoutGroup.vertical(
-                    layoutSize: NSCollectionLayoutSize(widthDimension: .absolute(outsideLeadingInset + smallSquareWidth + insideInset),
+                    layoutSize: NSCollectionLayoutSize(widthDimension: .absolute(smallSquareWidth + insideInset),
                                                       heightDimension: .fractionalHeight(1.0)),
                     subitem: smallSquareItem, count: 2)
 
                 let mediumSquareItem = NSCollectionLayoutItem(
-                    layoutSize: NSCollectionLayoutSize(widthDimension: .absolute(mediumSquareWidth + outsideTrailingInset),
+                    layoutSize: NSCollectionLayoutSize(widthDimension: .absolute(mediumSquareWidth),
                                                       heightDimension: .fractionalHeight(1.0)))
-                mediumSquareItem.contentInsets = NSDirectionalEdgeInsets(top: topInset, leading: 0, bottom: 0, trailing: outsideTrailingInset)
+                mediumSquareItem.contentInsets = NSDirectionalEdgeInsets(top: topInset, leading: 0, bottom: 0, trailing: 0)
 
                 let nestedGroup = NSCollectionLayoutGroup.horizontal(
                     layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
@@ -63,16 +62,16 @@ class NestedGroupCollectionViewController: UIViewController {
             
             let nestedGroupTypeB: NSCollectionLayoutGroup = {
                 let mediumSquareItem = NSCollectionLayoutItem(
-                    layoutSize: NSCollectionLayoutSize(widthDimension: .absolute(outsideLeadingInset + mediumSquareWidth + insideInset),
+                    layoutSize: NSCollectionLayoutSize(widthDimension: .absolute(mediumSquareWidth + insideInset),
                                                       heightDimension: .fractionalHeight(1.0)))
-                mediumSquareItem.contentInsets = NSDirectionalEdgeInsets(top: topInset, leading: outsideLeadingInset, bottom: 0, trailing: insideInset)
+                mediumSquareItem.contentInsets = NSDirectionalEdgeInsets(top: topInset, leading: 0, bottom: 0, trailing: insideInset)
 
                 let smallSquareItem = NSCollectionLayoutItem(
                     layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                                       heightDimension: .absolute(smallSquareWidth + insideInset)))
-                smallSquareItem.contentInsets = NSDirectionalEdgeInsets(top: topInset, leading: 0, bottom: 0, trailing: outsideTrailingInset)
+                smallSquareItem.contentInsets = NSDirectionalEdgeInsets(top: topInset, leading: 0, bottom: 0, trailing: 0)
                 let smallSquareGroup = NSCollectionLayoutGroup.vertical(
-                    layoutSize: NSCollectionLayoutSize(widthDimension: .absolute(smallSquareWidth + outsideTrailingInset),
+                    layoutSize: NSCollectionLayoutSize(widthDimension: .absolute(smallSquareWidth),
                                                       heightDimension: .fractionalHeight(1.0)),
                     subitem: smallSquareItem, count: 2)
 
@@ -91,9 +90,10 @@ class NestedGroupCollectionViewController: UIViewController {
                 let smallSquareGroup = NSCollectionLayoutGroup.horizontal(
                     layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                                       heightDimension: .absolute(smallSquareGroupHeight)),
-                    subitems: [smallSquareItem, smallSquareItem, smallSquareItem])
+                    subitem: smallSquareItem,
+                    count: 3)
                 smallSquareGroup.interItemSpacing = .fixed(insideInset)
-                smallSquareGroup.contentInsets = NSDirectionalEdgeInsets(top: topInset, leading: outsideLeadingInset, bottom: 0, trailing: outsideTrailingInset)
+                smallSquareGroup.contentInsets = NSDirectionalEdgeInsets(top: topInset, leading: 0, bottom: 0, trailing: 0)
                 
                 return smallSquareGroup
             }()
@@ -102,7 +102,9 @@ class NestedGroupCollectionViewController: UIViewController {
             layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                                heightDimension: .absolute(nestedGroupHeight * 2 + smallSquareGroupHeight * 2)),
             subitems: [nestedGroupTypeA, nestedGroupTypeC, nestedGroupTypeB, nestedGroupTypeC])
+            
             let section = NSCollectionLayoutSection(group: group)
+            section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: sideInset, bottom: 0, trailing: sideInset)
             return section
 
         }
@@ -114,7 +116,7 @@ extension NestedGroupCollectionViewController: UICollectionViewDelegate {}
 
 extension NestedGroupCollectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 26
+        return 27
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
