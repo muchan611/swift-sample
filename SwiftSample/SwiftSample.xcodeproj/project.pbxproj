@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90A1494F23936C6C00323B30 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A1494E23936C6C00323B30 /* APIClient.swift */; };
 		90AFC54C2311018800CF24B9 /* SampleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AFC54B2311018800CF24B9 /* SampleListViewController.swift */; };
 		90CC36DD2325333F00C4C080 /* OverlayClippedBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CC36DC2325333F00C4C080 /* OverlayClippedBaseViewController.swift */; };
 		90CC36DF232540D200C4C080 /* OverlayClippedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CC36DE232540D200C4C080 /* OverlayClippedViewController.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		90A1494E23936C6C00323B30 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		90AFC54B2311018800CF24B9 /* SampleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleListViewController.swift; sourceTree = "<group>"; };
 		90CC36DC2325333F00C4C080 /* OverlayClippedBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayClippedBaseViewController.swift; sourceTree = "<group>"; };
 		90CC36DE232540D200C4C080 /* OverlayClippedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayClippedViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90A1494C23936C2B00323B30 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				90A1494D23936C4100323B30 /* APIClient */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		90A1494D23936C4100323B30 /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				90A1494E23936C6C00323B30 /* APIClient.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
 		90AFC54D231105B200CF24B9 /* CustomCellList */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +163,7 @@
 		90DBC7EB2301500F00235BDA /* SwiftSample */ = {
 			isa = PBXGroup;
 			children = (
+				90A1494C23936C2B00323B30 /* Utility */,
 				90DBC81C23057EAB00235BDA /* Extension */,
 				90DBC7EC2301500F00235BDA /* AppDelegate.swift */,
 				90DBC7EE2301500F00235BDA /* RootViewController.swift */,
@@ -338,6 +357,7 @@
 				90DBC81B2302F42200235BDA /* CustomCellListViewController.swift in Sources */,
 				90DBC81E23057EDD00235BDA /* UITableView+Extension.swift in Sources */,
 				90D777702365998600EF63E0 /* NestedGroupCollectionViewCell.swift in Sources */,
+				90A1494F23936C6C00323B30 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
