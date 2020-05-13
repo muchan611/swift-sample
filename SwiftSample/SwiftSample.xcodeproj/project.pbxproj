@@ -25,6 +25,7 @@
 		90DBC81E23057EDD00235BDA /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DBC81D23057EDD00235BDA /* UITableView+Extension.swift */; };
 		90DBC8212305801C00235BDA /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DBC8202305801C00235BDA /* CustomCell.swift */; };
 		90DBC8232305804E00235BDA /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90DBC8222305804E00235BDA /* CustomCell.xib */; };
+		90E77C31246C3DAE00ACC6D9 /* RemoteNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E77C30246C3DAE00ACC6D9 /* RemoteNotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		90DBC81D23057EDD00235BDA /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		90DBC8202305801C00235BDA /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		90DBC8222305804E00235BDA /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		90E77C30246C3DAE00ACC6D9 /* RemoteNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteNotification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 		90DBC7EB2301500F00235BDA /* SwiftSample */ = {
 			isa = PBXGroup;
 			children = (
+				90E77C2F246C3D6F00ACC6D9 /* Entity */,
 				90A1494C23936C2B00323B30 /* Utility */,
 				90DBC81C23057EAB00235BDA /* Extension */,
 				90DBC7EC2301500F00235BDA /* AppDelegate.swift */,
@@ -212,6 +215,14 @@
 				90DBC8222305804E00235BDA /* CustomCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		90E77C2F246C3D6F00ACC6D9 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				90E77C30246C3DAE00ACC6D9 /* RemoteNotification.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,6 +364,7 @@
 				90CC36DF232540D200C4C080 /* OverlayClippedViewController.swift in Sources */,
 				90CC36DD2325333F00C4C080 /* OverlayClippedBaseViewController.swift in Sources */,
 				90DBC7ED2301500F00235BDA /* AppDelegate.swift in Sources */,
+				90E77C31246C3DAE00ACC6D9 /* RemoteNotification.swift in Sources */,
 				90D7776E2365978700EF63E0 /* NestedGroupCollectionViewController.swift in Sources */,
 				90DBC81B2302F42200235BDA /* CustomCellListViewController.swift in Sources */,
 				90DBC81E23057EDD00235BDA /* UITableView+Extension.swift in Sources */,
