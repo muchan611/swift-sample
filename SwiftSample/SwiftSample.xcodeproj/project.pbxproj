@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		901A499124A599FF00E95141 /* TabContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901A499024A599FF00E95141 /* TabContainerViewController.swift */; };
+		901A499324A5AC1F00E95141 /* TabCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901A499224A5AC1F00E95141 /* TabCollectionCell.swift */; };
+		901A499524A5AC5D00E95141 /* TabCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 901A499424A5AC5D00E95141 /* TabCollectionCell.xib */; };
 		90A1494F23936C6C00323B30 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A1494E23936C6C00323B30 /* APIClient.swift */; };
 		90AFC54C2311018800CF24B9 /* SampleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AFC54B2311018800CF24B9 /* SampleListViewController.swift */; };
 		90CC36DD2325333F00C4C080 /* OverlayClippedBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CC36DC2325333F00C4C080 /* OverlayClippedBaseViewController.swift */; };
@@ -46,6 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		901A499024A599FF00E95141 /* TabContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabContainerViewController.swift; sourceTree = "<group>"; };
+		901A499224A5AC1F00E95141 /* TabCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCollectionCell.swift; sourceTree = "<group>"; };
+		901A499424A5AC5D00E95141 /* TabCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabCollectionCell.xib; sourceTree = "<group>"; };
 		90A1494E23936C6C00323B30 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		90AFC54B2311018800CF24B9 /* SampleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleListViewController.swift; sourceTree = "<group>"; };
 		90CC36DC2325333F00C4C080 /* OverlayClippedBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayClippedBaseViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +104,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		901A498F24A599A900E95141 /* TabScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				901A499024A599FF00E95141 /* TabContainerViewController.swift */,
+				901A499224A5AC1F00E95141 /* TabCollectionCell.swift */,
+				901A499424A5AC5D00E95141 /* TabCollectionCell.xib */,
+			);
+			path = TabScrollView;
+			sourceTree = "<group>";
+		};
 		90A1494C23936C2B00323B30 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +190,7 @@
 				90AFC54D231105B200CF24B9 /* CustomCellList */,
 				90CC36DB2325325400C4C080 /* OverlayClippedView */,
 				90D7776C2365974100EF63E0 /* NestedGroupCollectionView */,
+				901A498F24A599A900E95141 /* TabScrollView */,
 				90DBC7F32301501000235BDA /* Assets.xcassets */,
 				90DBC7F52301501000235BDA /* LaunchScreen.storyboard */,
 				90DBC7F82301501000235BDA /* Info.plist */,
@@ -330,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90DBC7F72301501000235BDA /* LaunchScreen.storyboard in Resources */,
+				901A499524A5AC5D00E95141 /* TabCollectionCell.xib in Resources */,
 				90DBC7F42301501000235BDA /* Assets.xcassets in Resources */,
 				90DBC8232305804E00235BDA /* CustomCell.xib in Resources */,
 				90D77772236599B300EF63E0 /* NestedGroupCollectionViewCell.xib in Resources */,
@@ -364,7 +382,9 @@
 				90CC36DF232540D200C4C080 /* OverlayClippedViewController.swift in Sources */,
 				90CC36DD2325333F00C4C080 /* OverlayClippedBaseViewController.swift in Sources */,
 				90DBC7ED2301500F00235BDA /* AppDelegate.swift in Sources */,
+				901A499324A5AC1F00E95141 /* TabCollectionCell.swift in Sources */,
 				90E77C31246C3DAE00ACC6D9 /* RemoteNotification.swift in Sources */,
+				901A499124A599FF00E95141 /* TabContainerViewController.swift in Sources */,
 				90D7776E2365978700EF63E0 /* NestedGroupCollectionViewController.swift in Sources */,
 				90DBC81B2302F42200235BDA /* CustomCellListViewController.swift in Sources */,
 				90DBC81E23057EDD00235BDA /* UITableView+Extension.swift in Sources */,

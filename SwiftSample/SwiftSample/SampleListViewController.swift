@@ -3,7 +3,7 @@ import UIKit
 
 class SampleListViewController: UIViewController {
     enum Section: Int, CaseIterable {
-        case customCellList, overlayClippedView, nestedGroupCollectionView
+        case customCellList, overlayClippedView, nestedGroupCollectionView, tabScrollView
     }
     private let tableView = UITableView(frame: .zero)
     
@@ -39,6 +39,10 @@ extension SampleListViewController: UITableViewDelegate {
             let viewController = NestedGroupCollectionViewController()
             viewController.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(viewController, animated: true)
+        case .tabScrollView:
+            let viewController = TabContainerViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+            viewController.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(viewController, animated: true)
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -66,6 +70,8 @@ extension SampleListViewController: UITableViewDataSource {
             cell.textLabel?.text = "OverlayClippedBaseViewController"
         case .nestedGroupCollectionView:
             cell.textLabel?.text = "NestedGroupCollectionViewController"
+        case .tabScrollView:
+            cell.textLabel?.text = "TabContainerViewController"
         }
                
         return cell
