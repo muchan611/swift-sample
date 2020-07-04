@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XIBScrollViewController" customModule="SwiftSample" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="ubV-4I-Vff"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7GZ-QN-egt">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DRq-TD-gyg" userLabel="Content View">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7HC-V2-t4F" userLabel="Orange View">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
+                                    <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="600" id="cod-Lg-BFl"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iNd-4N-qcc" userLabel="Brown View">
+                                    <rect key="frame" x="0.0" y="600" width="414" height="600"/>
+                                    <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="600" id="rde-a0-qDZ"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="iNd-4N-qcc" secondAttribute="bottom" id="8ce-Nf-Atu"/>
+                                <constraint firstAttribute="trailing" secondItem="7HC-V2-t4F" secondAttribute="trailing" id="AMw-iY-dEb"/>
+                                <constraint firstAttribute="trailing" secondItem="iNd-4N-qcc" secondAttribute="trailing" id="WQu-YF-0gQ"/>
+                                <constraint firstItem="7HC-V2-t4F" firstAttribute="top" secondItem="DRq-TD-gyg" secondAttribute="top" id="cjZ-hq-vsr"/>
+                                <constraint firstItem="iNd-4N-qcc" firstAttribute="leading" secondItem="DRq-TD-gyg" secondAttribute="leading" id="diL-CC-id0"/>
+                                <constraint firstItem="7HC-V2-t4F" firstAttribute="leading" secondItem="DRq-TD-gyg" secondAttribute="leading" id="yOf-fG-rXh"/>
+                                <constraint firstItem="iNd-4N-qcc" firstAttribute="top" secondItem="7HC-V2-t4F" secondAttribute="bottom" id="yje-qT-7OF"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="DRq-TD-gyg" firstAttribute="top" secondItem="MfE-mu-f6S" secondAttribute="top" id="3Uj-ke-SJv"/>
+                        <constraint firstItem="DRq-TD-gyg" firstAttribute="width" secondItem="rQh-LA-2jO" secondAttribute="width" id="JAU-cS-noJ"/>
+                        <constraint firstItem="DRq-TD-gyg" firstAttribute="leading" secondItem="MfE-mu-f6S" secondAttribute="leading" id="nEF-eb-G99"/>
+                        <constraint firstItem="DRq-TD-gyg" firstAttribute="trailing" secondItem="MfE-mu-f6S" secondAttribute="trailing" id="sum-B5-bXQ"/>
+                        <constraint firstItem="DRq-TD-gyg" firstAttribute="bottom" secondItem="MfE-mu-f6S" secondAttribute="bottom" id="vJI-W9-ETN"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="MfE-mu-f6S"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="rQh-LA-2jO"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="7GZ-QN-egt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="227-C2-RG9"/>
+                <constraint firstItem="7GZ-QN-egt" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Fsl-2a-U0C"/>
+                <constraint firstAttribute="bottom" secondItem="7GZ-QN-egt" secondAttribute="bottom" id="NU2-zg-7iO"/>
+                <constraint firstItem="7GZ-QN-egt" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="aLY-Gr-MWy"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="150.66964285714286"/>
+        </view>
+    </objects>
+</document>
