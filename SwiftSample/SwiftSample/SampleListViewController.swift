@@ -3,11 +3,11 @@ import UIKit
 
 class SampleListViewController: UIViewController {
     enum Section: Int, CaseIterable {
-        case customCellList
-        case overlayClippedView
-        case nestedGroupCollectionView
-        case tabScrollView
         case xibScrollView
+        case tabScrollView
+        case nestedGroupCollectionView
+        case overlayClippedView
+        case customCellList
     }
     private let tableView = UITableView(frame: .zero)
     
