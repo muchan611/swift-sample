@@ -3,6 +3,7 @@ import UIKit
 
 class SampleListViewController: UIViewController {
     enum Section: Int, CaseIterable {
+        case mapSample
         case xibScrollView
         case tabScrollView
         case nestedGroupCollectionView
@@ -51,6 +52,10 @@ extension SampleListViewController: UITableViewDelegate {
             let viewController = XIBScrollViewController()
             viewController.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(viewController, animated: true)
+        case .mapSample:
+            let viewController = MapKitSampleCollectionViewController()
+            viewController.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(viewController, animated: true)
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -82,6 +87,8 @@ extension SampleListViewController: UITableViewDataSource {
             cell.textLabel?.text = "TabContainerViewController"
         case .xibScrollView:
             cell.textLabel?.text = "XIBScrollViewController"
+        case .mapSample:
+            cell.textLabel?.text = "MapKitSampleCollectionViewController"
         }
                
         return cell
