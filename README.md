@@ -19,6 +19,12 @@ https://muchan611.hatenablog.com/
 
 <img src="https://gyazo.com/ecbb99e1bc9d5084e55e06c281a9c141.png" width=200>
 
+## ProgressBarView
+
+- UIProgressViewを使ってインスタのストーリーみたいなUIを作ってみる
+- https://muchan611.hatenablog.com/entry/2021/08/08/213131
+
+<img src="https://i.gyazo.com/d778fe701560723ad61d30ec6cc9e58e.gif" width=200>
 
 ## TabContainerView
 
