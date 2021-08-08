@@ -23,6 +23,11 @@
 		90D777702365998600EF63E0 /* NestedGroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D7776F2365998600EF63E0 /* NestedGroupCollectionViewCell.swift */; };
 		90D77772236599B300EF63E0 /* NestedGroupCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90D77771236599B300EF63E0 /* NestedGroupCollectionViewCell.xib */; };
 		90D7777423659A9900EF63E0 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D7777323659A9900EF63E0 /* UICollectionView+Extension.swift */; };
+		90D89BD126C00197002824B0 /* ProgressBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D89BCC26C00197002824B0 /* ProgressBarViewController.swift */; };
+		90D89BD226C00197002824B0 /* happoike.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 90D89BCD26C00197002824B0 /* happoike.jpg */; };
+		90D89BD326C00197002824B0 /* enzansou.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 90D89BCE26C00197002824B0 /* enzansou.jpg */; };
+		90D89BD426C00197002824B0 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D89BCF26C00197002824B0 /* ProgressBar.swift */; };
+		90D89BD526C00197002824B0 /* happoike2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 90D89BD026C00197002824B0 /* happoike2.jpg */; };
 		90DBC7ED2301500F00235BDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DBC7EC2301500F00235BDA /* AppDelegate.swift */; };
 		90DBC7EF2301500F00235BDA /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DBC7EE2301500F00235BDA /* RootViewController.swift */; };
 		90DBC7F42301501000235BDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90DBC7F32301501000235BDA /* Assets.xcassets */; };
@@ -70,6 +75,11 @@
 		90D7776F2365998600EF63E0 /* NestedGroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedGroupCollectionViewCell.swift; sourceTree = "<group>"; };
 		90D77771236599B300EF63E0 /* NestedGroupCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NestedGroupCollectionViewCell.xib; sourceTree = "<group>"; };
 		90D7777323659A9900EF63E0 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		90D89BCC26C00197002824B0 /* ProgressBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBarViewController.swift; sourceTree = "<group>"; };
+		90D89BCD26C00197002824B0 /* happoike.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = happoike.jpg; sourceTree = "<group>"; };
+		90D89BCE26C00197002824B0 /* enzansou.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = enzansou.jpg; sourceTree = "<group>"; };
+		90D89BCF26C00197002824B0 /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		90D89BD026C00197002824B0 /* happoike2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = happoike2.jpg; sourceTree = "<group>"; };
 		90DBC7E92301500F00235BDA /* SwiftSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90DBC7EC2301500F00235BDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90DBC7EE2301500F00235BDA /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -187,6 +197,18 @@
 			path = NestedGroupCollectionView;
 			sourceTree = "<group>";
 		};
+		90D89BCB26C00183002824B0 /* ProgressBarView */ = {
+			isa = PBXGroup;
+			children = (
+				90D89BCE26C00197002824B0 /* enzansou.jpg */,
+				90D89BCD26C00197002824B0 /* happoike.jpg */,
+				90D89BD026C00197002824B0 /* happoike2.jpg */,
+				90D89BCF26C00197002824B0 /* ProgressBar.swift */,
+				90D89BCC26C00197002824B0 /* ProgressBarViewController.swift */,
+			);
+			path = ProgressBarView;
+			sourceTree = "<group>";
+		};
 		90DBC7E02301500F00235BDA = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +244,7 @@
 				901A498F24A599A900E95141 /* TabScrollView */,
 				904F8E4724B0A2E8004E9D60 /* XIBScrollView */,
 				909227D02544211E0010D5DD /* MapKitSample */,
+				90D89BCB26C00183002824B0 /* ProgressBarView */,
 				90DBC7F32301501000235BDA /* Assets.xcassets */,
 				90DBC7F52301501000235BDA /* LaunchScreen.storyboard */,
 				90DBC7F82301501000235BDA /* Info.plist */,
@@ -379,9 +402,12 @@
 			files = (
 				90DBC7F72301501000235BDA /* LaunchScreen.storyboard in Resources */,
 				901A499524A5AC5D00E95141 /* TabCollectionCell.xib in Resources */,
+				90D89BD226C00197002824B0 /* happoike.jpg in Resources */,
 				90DBC7F42301501000235BDA /* Assets.xcassets in Resources */,
+				90D89BD526C00197002824B0 /* happoike2.jpg in Resources */,
 				90DBC8232305804E00235BDA /* CustomCell.xib in Resources */,
 				90D77772236599B300EF63E0 /* NestedGroupCollectionViewCell.xib in Resources */,
+				90D89BD326C00197002824B0 /* enzansou.jpg in Resources */,
 				904F8E4B24B0A35F004E9D60 /* XIBScrollViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,11 +440,13 @@
 				90DBC7EF2301500F00235BDA /* RootViewController.swift in Sources */,
 				90CC36DF232540D200C4C080 /* OverlayClippedViewController.swift in Sources */,
 				909227D2254421A70010D5DD /* MapKitSampleCollectionViewController.swift in Sources */,
+				90D89BD126C00197002824B0 /* ProgressBarViewController.swift in Sources */,
 				90CC36DD2325333F00C4C080 /* OverlayClippedBaseViewController.swift in Sources */,
 				90DBC7ED2301500F00235BDA /* AppDelegate.swift in Sources */,
 				901A499324A5AC1F00E95141 /* TabCollectionCell.swift in Sources */,
 				90E77C31246C3DAE00ACC6D9 /* RemoteNotification.swift in Sources */,
 				904F8E4924B0A319004E9D60 /* XIBScrollViewController.swift in Sources */,
+				90D89BD426C00197002824B0 /* ProgressBar.swift in Sources */,
 				901A499124A599FF00E95141 /* TabContainerViewController.swift in Sources */,
 				90D7776E2365978700EF63E0 /* NestedGroupCollectionViewController.swift in Sources */,
 				90DBC81B2302F42200235BDA /* CustomCellListViewController.swift in Sources */,

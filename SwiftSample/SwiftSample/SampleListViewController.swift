@@ -9,6 +9,7 @@ class SampleListViewController: UIViewController {
         case nestedGroupCollectionView
         case overlayClippedView
         case customCellList
+        case progressBarView
     }
     private let tableView = UITableView(frame: .zero)
     
@@ -56,6 +57,10 @@ extension SampleListViewController: UITableViewDelegate {
             let viewController = MapKitSampleCollectionViewController()
             viewController.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(viewController, animated: true)
+        case .progressBarView:
+            let viewController = ProgressBarViewController()
+            viewController.modalPresentationStyle = .fullScreen
+            present(viewController, animated: true, completion: nil)
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -89,6 +94,8 @@ extension SampleListViewController: UITableViewDataSource {
             cell.textLabel?.text = "XIBScrollViewController"
         case .mapSample:
             cell.textLabel?.text = "MapKitSampleCollectionViewController"
+        case .progressBarView:
+            cell.textLabel?.text = "ProgressBarViewController"
         }
                
         return cell
